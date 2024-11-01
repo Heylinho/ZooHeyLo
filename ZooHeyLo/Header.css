@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor1: #3a2a25;
+  --cor2: #754507;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--cor2);
+}
+
+header {
+  background-color: beige;
+  position: fixed;
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo img {
+    width: 170px;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.nav-link {
+  box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.274);
+  width: 120px; /* Defina um valor fixo conforme necessário */
+  height: 40px; /* Defina um valor fixo conforme necessário */
+  line-height: 40px; /* Alinha verticalmente o texto */
+  text-align: center; /* Alinha horizontalmente o texto */
+  display: inline-block; /* Garante que a largura e a altura sejam aplicadas */
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: var(--cor2);
+  color: #fff;
+  box-sizing: border-box;
+  transition: 0.5s ease;
+  font-family: 'New Amsterdam';
+}
+
+.animais1 , .animais2 , .animais3 , .animais4{
+  display: block;
+}
+
+.nav-link:hover {
+  color: #fff;
+  background-color: var(--cor1);
+}
+
+.hamburguer {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 2px;
+  margin: 5px auto;
+  background-color: var(--cor1);
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 850px) {
+  .hamburguer {
+    display: block;
+  }
+
+  .hamburguer.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburguer.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburguer.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navbar {
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 70px;
+    gap: 0;
+    background-color: beige;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    transition: right 0.3s ease;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .animais1 , .animais2 , .animais3 , .animais4 {
+    display: block;
+  }
+
+}

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+:root {
+  --cor1: #3a2a25;
+  --cor2: #754507;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: url('img/wallpaper_outono.jpg') center/cover no-repeat;
+  overflow: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.507) 80%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s ease-in;
+}
+
+section {
+  width: 100%;
+  max-width: 1280px; /* Limita a largura máxima do contêiner */
+  height: 400px;
+  display: flex;
+}
+
+.logo, .imgTexto {
+  flex: 1; /* Faz com que os blocos se ajustem igualmente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img, .imgTexto img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse o bloco */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block;
+}
+
+/* Para telas pequenas e tablets */
+@media (max-width: 1280px) {
+  section {
+    flex-direction: column;
+    height: auto; /* Ajusta a altura para conteúdo em coluna */
+  }
+
+  .logo, .imgTexto {
+    width: 100%; /* Ajusta a largura dos blocos para 100% */
+  }
+
+  .logo img, .imgTexto img {
+    width: 50%; /* Ajusta o tamanho das imagens em telas menores */
+  }
+}
+
+/* Para smartphones */
+@media (max-width: 768px) {
+  .logo img, .imgTexto img {
+    width: 70%; /* Ajusta o tamanho das imagens para smartphones */
+  }
+}
+
+/* Para dispositivos móveis muito pequenos */
+@media (max-width: 480px) {
+  .logo img, .imgTexto img {
+    width: 90%; /* Ajusta o tamanho das imagens para dispositivos móveis muito pequenos */
+  }
+}

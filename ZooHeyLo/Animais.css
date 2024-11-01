@@ -1,0 +1,105 @@
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #cavalo , #passaro{
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    margin-top: 10vh;
+  }
+
+ #raposa , #babuino{
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10vh;
+    flex-direction: row-reverse;
+  }
+  #CavaloFoto , #RaposaFoto , #PassaroFoto , #BabuinoFoto{
+    border-radius: 20px; 
+    box-shadow: 10px 10px 10px 5px #3a2a25;
+    width: 100%;
+  }
+  
+  .logoAnimal {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .txtAnimal {
+    width: 80%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Mono';
+    overflow: hidden;
+    padding: 3rem;
+    font-size: 1.5rem;
+    line-height: 3;
+  }
+
+  @media (max-width: 850px){
+    #cavalo , #raposa , #passaro , #babuino{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+      }
+
+      #CavaloFoto {
+        border-radius: 20px; 
+        box-shadow: 10px 10px 10px 5px #3a2a25;
+        width: 40%;
+      }
+
+      #RaposaFoto {
+        border-radius: 20px; 
+        box-shadow: 10px 10px 10px 5px #3a2a25;
+        width: 50%;
+      }
+
+      #PassaroFoto {
+        border-radius: 20px; 
+        box-shadow: 10px 10px 10px 5px #3a2a25;
+        width: 50%;
+      }
+
+      #BabuinoFoto {
+        border-radius: 20px; 
+        box-shadow: 10px 10px 10px 5px #3a2a25;
+        width: 50%;
+      }
+
+      .logoAnimal {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .txtAnimal {
+        width: 100%;
+        padding: 3rem 1.5rem;
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+
+  }
